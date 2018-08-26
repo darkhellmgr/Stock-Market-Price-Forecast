@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <section class="page-heading">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 >Predict The Future</h1>
+              </div>
+            </div>
+          </div>
+    </section>
+
+
+    <section class="page-content">
+      <div class="container">
+          <div class="row ">
+              <div class="container">
+                <form method="post">
+                      <div class="form-group">
+                          <div class="card">
+                              <div class="card-header">
+                                  Available Company List
+                              </div>
+                              <div class="card-body">
+                         <select style="width:50%" name="companylist">
+                          <option value="ADBL">ADBL</option>
+                          <option value="ADB">ADB</option>
+                          <option value="BOKL">BOKL</option>
+                          <option value="ALICL">ALICL</option>
+                         </select>
+                          <br><br>
+                              <a href="{%url 'prediction'%}">
+                                  <button type="button" id="prediction" class="btn btn-secondary">Get Prediction</button></a>
+                          <br>
+                          <br>
+                              <a href="{%url 'prediction'%}">
+                                  <button type="button" id="visualize" class="btn btn-secondary">Get Graph</button></a>
+                      </div>
+                          </div>
+                      </div>
+                </form>
+          </div>
+              </div>
+      </div>
+    </section>
+
+<!--<script>-->
+<!--&lt;!&ndash;$(document).on('click', '#prediction', fucntion()&ndash;&gt;-->
+<!--&lt;!&ndash;{&ndash;&gt;-->
+    <!--&lt;!&ndash;$.ajax({&ndash;&gt;-->
+    <!--&lt;!&ndash;type: "POST",&ndash;&gt;-->
+    <!--&lt;!&ndash;url: $(this).attr('name),&ndash;&gt;-->
+    <!--&lt;!&ndash;context: this,&ndash;&gt;-->
+    <!--&lt;!&ndash;success: function(result){&ndash;&gt;-->
+        <!--&lt;!&ndash;alert("ok");&ndash;&gt;-->
+    <!--&lt;!&ndash;},&ndash;&gt;-->
+    <!--&lt;!&ndash;error: function(result){&ndash;&gt;-->
+        <!--&lt;!&ndash;alert("error");&ndash;&gt;-->
+    <!--&lt;!&ndash;}&ndash;&gt;-->
+    <!--&lt;!&ndash;});&ndash;&gt;-->
+   <!--&lt;!&ndash;});&ndash;&gt;-->
+
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+
+{% endblock %}
+
+   <!--$(document).on('click', '#questiondetail',function()-->
+   <!--{-->
+     <!--$.ajax({-->
+   <!--type: "GET",-->
+   <!--url: $(this).attr('name'),-->
+   <!--context: this,-->
+   <!--success: function(data, status) {-->
+   <!--x=$(this).attr('data-target');-->
+   <!--var details="<br><br>";-->
+   <!--delete data['Quiz'];-->
+   <!--delete data['question'];-->
+   <!--delete data['course'];-->
+   <!--delete data['topic'];-->
+   <!--delete data['updated_at'];-->
+   <!--delete data['created_at'];-->
+
+
+    <!--for (i in data) {-->
+    <!--details+="<b>"+i+"</b>:"+data[i]+"<br>";-->
+   <!--}-->
+   <!--$(x).html(details);-->
+   <!--}-->
+   <!--});-->
+<!--});-->

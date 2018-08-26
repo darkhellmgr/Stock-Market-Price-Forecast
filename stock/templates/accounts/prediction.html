@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <section class="page-heading">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 >Agriculture Development Bank LImited</h1>
+              </div>
+            </div>
+          </div>
+    </section>
+<br>
+
+<div class="row">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                ADBL 14 days stocks price forecasting
+            </div>
+           <div class="card-body">
+           <style>
+            table, th, td {
+               border: 1.5px solid black;
+               <!--border-collapse: collapse;-->
+            }
+            th, td {
+               padding: 5px;
+               text-align: left;
+            }
+            </style>
+           <table style="width:60%;">
+               <tr>
+                   <th>Date</th>
+                   <th>Forecast Closing Price</th>
+                 </tr>
+               {%for a,b in result%}
+               <tr>
+                   <td>{{a}}</td>
+                   <td>{{b}}</td>
+               </tr>
+               {%endfor%}
+
+           </table>
+       </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
